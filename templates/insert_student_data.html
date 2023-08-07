@@ -1,0 +1,50 @@
+{% extends 'dummy.html' %}
+
+
+{% block title %}
+<title>insert</title>
+{% endblock %}
+
+{% block body_block %}
+<body>
+    <style>
+        h1
+        {
+            background-color: rgb(255, 77, 0);
+        }
+        form
+        {
+            background-color: hsla(303, 62%, 47%, 0.408);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            height: 500px;
+            width: 400px;
+            font-size: 20px;
+        }
+        input
+        {
+            border-radius: 5px;
+        }
+        #one
+        {
+            border-radius:0px 10px 0px 10px;
+            background:linear-gradient(to right,blue,#1fb736);
+            color:whitesmoke;
+            font-size: 20px;
+            padding:2px;
+            width: 150px;
+        }
+    </style>
+    <center>
+        <h1>insert_student_data</h1>
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+             {{m.as_p}}
+             <input type="submit" value="submit" id="one">
+          </form>
+        
+        
+    </center>
+</body>
+{% endblock %}
